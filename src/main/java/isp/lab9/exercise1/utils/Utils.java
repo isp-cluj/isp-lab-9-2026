@@ -2,7 +2,7 @@ package isp.lab9.exercise1.utils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import isp.lab9.exercise1.services.StockItem;
+import isp.lab9.exercise1.model.StockItem;
 
 import java.io.IOException;
 import java.io.StringReader;

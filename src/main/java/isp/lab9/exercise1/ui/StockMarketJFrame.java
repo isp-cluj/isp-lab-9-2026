@@ -5,7 +5,7 @@
 package isp.lab9.exercise1.ui;
 
 import isp.lab9.exercise1.services.UserPortfolio;
-import isp.lab9.exercise1.services.StockMarketQueryService;
+import isp.lab9.exercise1.services.StockMarket;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  * @author radu.miron
  */
 public class StockMarketJFrame extends JFrame {
-    private StockMarketQueryService marketService;
+    private StockMarket stockMarket;
     private UserPortfolio portfolio;
 
     /**
@@ -27,8 +27,8 @@ public class StockMarketJFrame extends JFrame {
      */
     public StockMarketJFrame() {
         try {
-            marketService = new StockMarketQueryService();
-            marketService.refreshMarketData();
+            stockMarket = new StockMarket();
+            stockMarket.refreshMarketData();
 
             portfolio = new UserPortfolio(new BigDecimal(1000), new TreeMap<>());
         } catch (IOException ex) {
@@ -55,8 +55,8 @@ public class StockMarketJFrame extends JFrame {
         this.add(tabs);
     }
 
-    public StockMarketQueryService getMarketService() {
-        return marketService;
+    public StockMarket getStockMarket() {
+        return stockMarket;
     }
 
     public UserPortfolio getPortfolio() {

@@ -5,6 +5,8 @@
  */
 package isp.lab9.exercise1.services;
 
+import isp.lab9.exercise1.model.StockItem;
+
 import javax.swing.table.AbstractTableModel;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -16,7 +18,7 @@ import java.util.List;
  *
  * @author mihai.hulea
  */
-public class StockMarketQueryService extends AbstractTableModel {
+public class StockMarket extends AbstractTableModel {
     private String[] columns = new String[]{"Name", "Symbol", "Price", "Currency", "Change", "Exchange"};
     private String[] symbols = new String[]{"INTC", "BABA", "TSLA", "AIR.PA", "MSFT", "AAPL",
             "OHI", "MPW", "MMM", "SWK", "PFE", "ABBV", "JNJ", "MDT", "RIO", "EPD", "ET", "USA",

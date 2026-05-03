@@ -3,6 +3,7 @@ package isp.lab9.exercise1.services;
 import com.gargoylesoftware.htmlunit.*;
 import com.gargoylesoftware.htmlunit.html.HtmlButton;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import isp.lab9.exercise1.model.StockItem;
 import isp.lab9.exercise1.utils.Utils;
 
 import java.io.IOException;
@@ -55,6 +56,7 @@ public class YahooWebClient {
             webClient = new WebClient(BrowserVersion.CHROME);
             webClient.addRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
             webClient.getOptions().setJavaScriptEnabled(true);
+            webClient.getOptions().setUseInsecureSSL(true);
             webClient.getOptions().setThrowExceptionOnScriptError(false);
             webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
             webClient.setCssErrorHandler(new SilentCssErrorHandler());

@@ -18,7 +18,7 @@ public class MarketJPanel extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         JTable jTableMarket = new JTable();
-        jTableMarket.setModel(frame.getMarketService());
+        jTableMarket.setModel(frame.getStockMarket());
         JScrollPane marketScrollablePane = new JScrollPane(jTableMarket);
 
         JButton refreshButton = new JButton("Refresh");
@@ -34,7 +34,7 @@ public class MarketJPanel extends JPanel {
      */
     private void buttonRefreshActionPerformed(ActionEvent evt) {
         try {
-            frame.getMarketService().refreshMarketData();
+            frame.getStockMarket().refreshMarketData();
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this,
                     ex.getMessage(),

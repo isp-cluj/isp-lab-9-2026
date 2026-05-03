@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package isp.lab9.exercise1.services;
+package isp.lab9.exercise1.model;
 
 import lombok.Data;
 

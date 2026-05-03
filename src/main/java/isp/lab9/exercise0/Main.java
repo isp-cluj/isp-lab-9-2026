@@ -5,7 +5,7 @@
  */
 package isp.lab9.exercise0;
 
-import isp.lab9.exercise1.services.StockItem;
+import isp.lab9.exercise1.model.StockItem;
 import isp.lab9.exercise1.services.YahooWebClient;
 
 import java.math.BigDecimal;

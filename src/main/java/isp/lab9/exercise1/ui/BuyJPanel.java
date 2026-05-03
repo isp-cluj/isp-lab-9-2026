@@ -28,7 +28,7 @@ public class BuyJPanel extends JPanel {
 
         JLabel symbolLabel = new JLabel("Symbol:");
         JComboBox<String> symbolComboBox = new JComboBox<>();
-        symbolComboBox.setModel(new DefaultComboBoxModel(mainFrame.getMarketService().getSymbols()));
+        symbolComboBox.setModel(new DefaultComboBoxModel(mainFrame.getStockMarket().getSymbols()));
 
         JLabel quantityLabel = new JLabel("Quantity:");
         JTextField quantityTextField = new JTextField();
@@ -77,7 +77,7 @@ public class BuyJPanel extends JPanel {
                                                    JTextField totalCostTextField) {
         try {
             String symbol = (String) symbolComboBox.getSelectedItem();
-            BigDecimal stockPrice = mainFrame.getMarketService().getStockPrice(symbol);
+            BigDecimal stockPrice = mainFrame.getStockMarket().getStockPrice(symbol);
 
             try {
                 int quantity = Integer.parseInt(quantityTextField.getText());
