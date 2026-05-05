@@ -50,6 +50,7 @@ public class LoginJFrame extends JFrame {
     }
 
     private void verifyCredentials(JTextField userInputField, JPasswordField pwdInputField) {
+
         LoginJFrame.this.setVisible(false);
         new StockMarketJFrame();
 
