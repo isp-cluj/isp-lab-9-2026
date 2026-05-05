@@ -6,7 +6,7 @@
 package isp.lab9.exercise1.model;
 
 import lombok.Data;
-import lombok.Getter;
+
 
 import java.math.BigDecimal;
 
